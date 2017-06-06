@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.up.skill.account.UserAuthenticationIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.35 sec - in com.up.skill.account.UserAuthenticationIntegrationTest

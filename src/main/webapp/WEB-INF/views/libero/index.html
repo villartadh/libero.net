@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Libero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="../../../resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="../../../resources/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../../resources/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="../../../resources/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="../../../resources/css/customize.css" rel="stylesheet" media="screen" th:href="@{/resources/css/customize.css}"/>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+		<div id="nav-logo">
+			<img th:src="@{resources/images/logo.png}"id="logo">
+			<img th:src="@{resources/images/libero.png}"id="libero">
+		</div>
+        <ul class="hiddenSearch">
+            <li>
+                <form action="#"><input type="search" name="searchHide" class="hide"></form>
+            </li>
+            <li><img th:src="@{resources/images/search-icon.png}" style="float: right" alt="search" id="searchHiddenToggle"></li>
+        </ul>
+	<div id="menu">
+        <i class="fa fa-sort-desc fa-2x">&nbsp;&nbsp;Menu</i>
+	</div>
+		<ul id="nav" class="merge">
+			<li  class="selected"><a href="#">HOME</a></li>
+			<li><a href="#">NEWS</a></li>
+			<li><a href="#">EVENTS</a></li>
+			<li><a href="#">WORLD</a></li>
+            <li>
+                <form action="#"><input type="search" name="search" class="hide"></form>
+            </li>
+			<li><img th:src="@{resources/images/search-icon.png}" alt="search" id="search"></li>
+		</ul>
+    </header>
+    <div class="container">
+		<section id="first-section" class="">
+			<div id="ajaxSpinnerContainer">
+				<img th:src="@{resources/images/ajax-loader.gif}" id="ajaxSpinnerImage"/>
+				<h2 class="msg">How do you feel about recycling?</h2>
+				<form  id="info_form" th:action="@{/create}" th:method="post">
+					<label for="postcode">Postcode:</label><br>
+					<input type="text" class="postcode" id="postcode" name="postcode">
+					<p>Should the government start enforcing garbage
+						separation and recycling schemes across your area?</p>
+					<div class="radio-toolbar">
+						<input type="radio" id="radio1" name="radios" value="Yes">
+						<label for="radio1">Yes
+							<div class="outer"  id="radio-button-select"><div class="inner"></div></div>
+						</label>
+						<input type="radio" id="radio2" name="radios" value="No">
+						<label for="radio2" class="radios">No
+							<div class="outer"><div class="inner"></div></div>
+						</label>
+					</div><br>
+					<label for="email">E-mail Address:</label><br>
+					<input type="text" id="email" class="email" name="email"><br>
+					<label for="mobno">Mobile Number:</label><br>
+					<input type="text" id="mobno" class="mobno" name="mobno"><br>
+					<input type="submit" id="info_formBtn" class="submit" name="submit"><br>
+				</form>
+                <div th:replace="liberoFragments/successMsg :: successMsg">successMsg</div>
+                <div th:replace="liberoFragments/alreadyFillOut :: alreadyFillOut">alreadyFillOut</div>
+			</div>
+		</section>
+        <div class="clearFix"></div>
+	<secion id="second-section" class="">
+
+		<h3>Phasellus augue sapien</h3>
+        <div class="closure">
+            <div class="article">
+                <img th:src="@{resources/images/1b.jpeg}" alt="image" class="background-img">
+                <h4>Vestibulum sit amet tempor orci</h4>
+                <div class="link-con"><a href="#">Read more&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+            </div>
+            <p>Phasellus augue sapien, aliquam sit amec mauris</p>
+        </div>
+        <div class="closure">
+            <div class="article">
+                <img th:src="@{resources/images/1c.jpeg}" alt="image" class="background-img">
+                <h4>Integer consectetur orci ligula</h4>
+                <div class="link-con"><a href="#">Read more&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+            </div>
+            <p>Sed facilisis volutpat turpis eu viverra</p>
+        </div>
+	</secion>
+    </div>
+
+    <div class="clear"></div>
+	<footer>
+        <div class="container">
+                <ul class="f-list-1">
+                    <h6>Rutrum</h6>
+                    <hr class="divider">
+                    <li class="clear">Fermentum</li>
+                    <li>Neque</li>
+                    <li>Consequat</li>
+                </ul>
+                <ul class="f-list-2">
+                    <h6>Malesuada</h6>
+                    <hr class="divider">
+                    <li class="clear">Tellus</li>
+                    <li>Condimentum</li>
+                    <li>Consectetur</li>
+                </ul>
+                <ul class="f-list-3">
+                    <h6>Pellentesque</h6>
+                    <hr class="divider">
+                    <li class="clear">Habitant</li>
+                    <li>Morbi</li>
+                    <li>Tristique</li>
+                </ul>
+                <ul class="f-list-4">
+                    <h6>Quisque</h6>
+                    <hr class="divider">
+                    <li class="clear">Pharetra</li>
+                    <li>Volutpat</li>
+                    <li>Tristique</li>
+                </ul>
+            <ul id="footer-list-last">
+                <li><h6 class="last"><i class="fa fa-circle fa-2x" aria-hidden="true">&nbsp;</i>Phasellus</h6></li>
+                <li><h6 class="last"><i class="fa fa-circle fa-2x" aria-hidden="true">&nbsp;</i>Augue</h6></li>
+                <li><h6 class="last"><i class="fa fa-circle fa-2x" aria-hidden="true">&nbsp;</i>Sapien</h6></li>
+            </ul>
+        </div>
+	</footer>
+</div>
+<script type="text/javascript"  th:src="@{resources/js/main.js}"></script>
+</body>
+</html>

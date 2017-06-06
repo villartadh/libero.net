@@ -1,0 +1,595 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+/********************
+Actual Project
+*********************/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+
+  /**
+  set of column 1
+  ***/
+  .col-1 {
+    width: 8.333%
+  }
+  .col-2 {
+    width: 16.666%
+  }
+  .col-3 {
+    width: 24.999%
+  }
+  .col-4 {
+    width: 33.322%
+  }
+  .col-5 {
+    width: 41.665%
+  }
+  .col-6 {
+    width: 49.998%
+  }
+  .col-7 {
+    width: 58.331%
+  }
+  .col-8 {
+    width: 66.664%
+  }
+  .col-9 {
+    width: 74.997%
+  }
+  .col-10 {
+    width: 83.33%
+  }
+  .col-11 {
+    width: 91.663%
+  }
+  .col-12 {
+    width: 100%
+  }
+
+  /**
+  set of column 2
+  ***/
+  .col-m-1 {
+    width: 8.333%
+  }
+  .col-m-2 {
+    width: 16.666%
+  }
+  .col-m-3 {
+    width: 24.999%
+  }
+  .col-m-4 {
+    width: 33.322%
+  }
+  .col-m-5 {
+    width: 41.665%
+  }
+  .col-m-6 {
+    width: 49.998%
+  }
+  .col-m-7 {
+    width: 58.331%
+  }
+  .col-m-8 {
+    width: 66.664%
+  }
+  .col-m-9 {
+    width: 74.997%
+  }
+  .col-m-10 {
+    width: 83.33%
+  }
+  .col-m-11 {
+    width: 91.663%
+  }
+  .col-m-12 {
+    width: 100%
+  }
+
+  .clear {
+    clear: both;
+  }
+  .selected {
+    background-color: cornflowerblue;
+    color: white;
+  }
+  #container {
+    padding: 5px 7%;
+  }
+  .float {
+    float: left;
+  }
+  .hr {
+
+    margin: 10px 0;
+    height: 10px;
+    background-color: cornflowerblue;
+  }
+  img{
+    max-width: 100%;
+  }
+
+  /***
+  heading
+  **/
+
+  body {
+    height: 1000px;
+    header {
+      position: relative;
+      margin-bottom: 20px;
+      background-color: #0a233d;
+      padding: 0;
+      border-bottom: 2px solid cornflowerblue;
+      #head {
+        text-align: center;
+        height: 90px;
+        #burger {
+          position: absolute;
+          top: 17px;
+          left: 5%;
+          padding-top: 9px;
+          float: left;
+          width: 45px;
+          div:last-child {
+            margin-bottom: 0;
+          }
+          .burger {
+            display: block;
+            position: relative;
+            margin-bottom: 7px;
+            height: 7px;
+            background-color: #f3f3f3;
+          }
+          #dropdown {
+            box-sizing: border-box;
+            margin-top: 16px;
+            background-color: #e7e7e7;
+            position: relative;
+            display: none;
+            text-align: left;
+            width: 300px;
+            height: 100%;
+            -webkit-box-shadow: 2px 6px 16px -1px rgba(56, 51, 56, 0.56);
+            -moz-box-shadow: 2px 6px 16px -1px rgba(56, 51, 56, 0.56);
+            box-shadow: 2px 6px 16px -1px rgba(56, 51, 56, 0.56);
+            z-index: 1;
+            ul {
+              li:hover {
+                display: block;
+                background-color: cornflowerblue;
+                color: white;
+              }
+              li {
+                font-family: sans-serif;
+                padding: 5px 10px;
+                height: 40px;
+                width: 100%;
+                color: #0a233d;
+              }
+            }
+          }
+        }
+        #burger:hover .burger {
+          background-color: #c6c6c6;
+          color: white;
+        }
+        #burger:hover #dropdown {
+          display: block;
+        }
+
+        #logo {
+          position: absolute;
+          top: 17px;
+          left: 20%;
+          float: left;
+          font-size: 45px;
+          font-weight: normal;
+          color: white;
+        }
+        #search{
+          position: relative;
+          top:17px;
+          margin-right: 10px;
+          right: 0;
+          float: right;
+          font-family: arial black, sans-serif;
+          color: white;
+        }
+        #search:hover+#search-nav{
+          position: absolute;
+          display: block;
+        }
+
+        #search-nav{
+          display: none;
+          position: absolute;
+          top: 63px;
+          right: 32px;
+        }
+        input[name=search]{
+          padding: 0 5px;
+          position: absolute;
+          right: 0;
+          outline-style: none;
+          width: 250px;
+          height: 25px;
+          border: 2px solid cornflowerblue;
+          background-color: white;
+          border-radius: 10px;
+          z-index: 1;
+        }
+      }
+      #nav {
+        display: inline-block;
+        position: absolute;
+        top:30px;
+        left: 27%;
+        text-align: center;
+        ul {
+          background-color: #0a233d;
+          text-align: center;
+          li {
+            height: 25px;
+            width: 75px;
+            display: inline-block;
+            padding-top: 3px;
+            border-radius: 2px;
+            margin-right: 5%;
+            a {
+              font-size: 18px;
+              font-family: arial, sans-serif;
+              color: white;
+            }
+          }
+          li:hover {
+            border-bottom: 3px solid cornflowerblue;
+          }
+        }
+      }
+    }
+
+
+
+    /**************
+    first section
+    **************/
+    section {
+      float: left;
+      font-family: 'Droid Sans', sans-serif;
+      h1 {
+        font-weight: lighter;
+        padding-bottom: 10px;
+      }
+      form {
+        padding: 0 10px;
+        p {
+          text-space: 5px;
+          margin-bottom: 10px;
+        }
+        input[name=postcode] {
+          padding: 0 10px;
+          width: 90px;
+          height: 30px;
+          outline-style: none;
+          border: 3px solid cornflowerblue;
+          border-radius: 20px;
+          margin-bottom: 5px;
+        }
+        div {
+          label {
+
+          }
+          input[type=radio] {
+            margin-bottom: 5px;
+          }
+        }
+        input[name=e_mail] {
+          margin-bottom: 5px;
+          border: 3px solid cornflowerblue;
+          margin-top: 2px;
+          padding: 0 10px;
+          outline-style: none;
+          border-radius: 20px;
+          width: 200px;
+          height: 30px;
+        }
+        input[name=mobno] {
+          padding: 0 10px;
+          width: 200px;
+          height: 30px;
+          outline-style: none;
+          border: 3px solid cornflowerblue;
+          border-radius: 20px;
+          margin-bottom: 5px;
+        }
+        input[type=submit] {
+          float: right;
+          margin-top: 5px;
+          margin-bottom: 25px;
+          padding: 0 10px;
+          width: 90px;
+          height: 30px;
+          background-color: #0a233d;
+          outline-style: none;
+          border-radius: 20px;
+          color: white;
+          border: 2px solid #0a233d;
+
+        }
+        .radio-toolbar input[type="radio"] {
+          outline: 0;
+          position: absolute;
+          display: none;
+        }
+
+        .radio-toolbar label {
+          display: inline-block;
+          width: 60px;
+          height: 30px;
+          background-color: white;
+          color: cornflowerblue;
+          border-radius: 20px;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          cursor: pointer;
+          border: 0.15em solid cornflowerblue;
+          padding: 0 20px;
+
+
+          /*******************
+          custom radio button
+          *******************/
+          .outer {
+            margin: 0;
+            position: relative;
+            right: 15px;
+            top: -12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            border: 2px solid cornflowerblue;
+          }
+          .inner {
+            position: relative;
+            left: 2px;
+            top: 2px;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            background-color: cornflowerblue;
+          }
+        }
+
+        .radio-toolbar input[type="radio"]:checked + label {
+          background-color: cornflowerblue;
+          color: white;
+          .inner{
+            position: relative;
+            left: 2px;
+            top: 2px;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            background-color: white;
+          }
+          .outer {
+            margin: 0;
+            position: relative;
+            right: 15px;
+            top: -12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            border: 2px solid white;
+          }
+
+        }
+        .radio-toolbar input[type="radio"]:checked + label#radio-button-select {
+          background-color: cornflowerblue;
+          border: 1px solid white;
+        }
+      }
+    }
+
+
+    /**************
+    second section
+    **************/
+    #second-section {
+      float: right;
+      padding: 1%;
+      h4 {
+        margin: 10px 0;
+        font-weight: 600;
+      }
+      .article{
+        position: relative;
+        div{
+          width: 100%;
+          position: relative;
+          img{
+            position: relative;
+            max-width: 100%;
+          }
+          a{
+            position: absolute;
+            background-color: #0d5990;
+            color: white;
+            height: 20px;
+            width: 105px;
+            bottom: 4px;
+            font-size: 1em;
+          }
+        }
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+    /**************
+    footer
+    **************/
+    footer {
+      margin: 0 auto;
+      div{
+        float: left;
+        font-family: arial, sans-serif;
+        text-align: left;
+        margin: 10px 0;
+        padding-left: 3px;
+        font-weight: normal;
+        background-color: #f6f6f6;
+        border: 1px solid #e6e6e6;
+        .footer-list{
+          h4{
+            margin: 10px auto 5px;
+          }
+          .div-hr{
+            border: 0;
+            background-color: cornflowerblue;
+            height: 10px;
+          }
+        }
+        #footer-list-last{
+          h4{
+            margin: 0 0 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px){
+  body{
+    header #nav {
+      display: none;
+    }
+    header #head div #search{
+      width: 33px;
+      height: 33px;
+      top:57px;
+    }
+    header #head #logo{
+      left: 30%;
+    }
+    header #head div #search-nav input[name=search]{
+      width: 280px;
+      right: 15px;
+    }
+  }
+  /**
+  set of column 1
+  ***/
+  .col-1 {
+    width: 8.333%
+  }
+  .col-2 {
+    width: 16.666%
+  }
+  .col-3 {
+    width: 24.999%
+  }
+  .col-4 {
+    width: 33.322%
+  }
+  .col-5 {
+    width: 41.665%
+  }
+  .col-6 {
+    width: 49.998%
+  }
+  .col-7 {
+    width: 58.331%
+  }
+  .col-8 {
+    width: 66.664%
+  }
+  .col-9 {
+    width: 74.997%
+  }
+  .col-10 {
+    width: 83.33%
+  }
+  .col-11 {
+    width: 91.663%
+  }
+  .col-12 {
+    width: 100%
+  }
+}
+@media only screen and (min-width: 580px){
+  body{
+    header #nav {
+      display: none;
+    }
+    header #head #logo{
+      left: 30%;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px){
+  body{
+    header #nav {
+      display: inline-block;
+    }
+    header #head #burger{
+      display: none;
+    }
+    header #head #logo{
+      left: 20px;
+    }
+  }
+  /**
+  set of column 2
+  ***/
+  .col-m-1 {
+    width: 8.333%
+  }
+  .col-m-2 {
+    width: 16.666%
+  }
+  .col-m-3 {
+    width: 24.999%
+  }
+  .col-m-4 {
+    width: 33.322%
+  }
+  .col-m-5 {
+    width: 41.665%
+  }
+  .col-m-6 {
+    width: 49.998%
+  }
+  .col-m-7 {
+    width: 58.331%
+  }
+  .col-m-8 {
+    width: 66.664%
+  }
+  .col-m-9 {
+    width: 74.997%
+  }
+  .col-m-10 {
+    width: 83.33%
+  }
+  .col-m-11 {
+    width: 91.663%
+  }
+  .col-m-12 {
+    width: 100%
+  }
+}

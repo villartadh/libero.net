@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <style rel="stylesheet">
+        input[type=submit]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="liberoFragments/header :: header">Header</div>
+    <div class="container" style="max-width: 700px">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4>
+                    <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;<span th:text="${user.e_mail}"></span>
+                    <span class="pull-right">User's Id:&nbsp;&nbsp;<span th:text="${user.id}" style="color: crimson"></span></span>
+                </h4>
+            </div>
+             <form th:action="@{/update}" th:method="post">
+                <table class="table">
+                    <tr class="form-group-sm" hidden>
+                        <td>
+                            <label for="id" class="control-label col-sm-6">User's id:</label>
+                        </td>
+                        <td class="col-sm-6">
+                            <input id="id" type="hidden" class="text-center form-control"  th:value="${user.id}" name="id">
+                        </td>
+                    </tr>
+                    <tr class="form-group-sm">
+                        <td>
+                            <label for="user" class="control-label col-sm-6">User postcode:</label>
+                        </td>
+                        <td class="col-sm-6">
+                            <input id="user" type="text" class="text-center form-control" th:value="${user.postcode}" name="postcode">
+                        </td>
+                    </tr>
+
+                     <tr class="form-group-sm">
+                         <td>
+                             <label for="choices" class="control-label col-sm-6">User's choice:</label>
+                         </td>
+                         <td class="col-sm-6">
+                             <input id="choices" class="text-center form-control" type="text" th:value="${user.radios}" name="radios">
+                         </td>
+                     </tr>
+
+                    <tr class="form-group-sm">
+                        <td>
+                            <label for="email" class="control-label col-sm-6">User's e-mail:</label>
+                        </td>
+                        <td class="col-sm-6">
+                            <input id="email" class="text-center form-control" type="text" th:value="${user.e_mail}" name="email">
+                        </td>
+                    </tr>
+
+                    <tr class="form-group-sm">
+                        <td>
+                            <label for="mob_no" class="control-label col-sm-6">User's mobile no.:</label>
+                        </td>
+                        <td class="col-sm-6">
+                            <input id="mob_no" class="text-center form-control" type="text" th:value="${user.mobno}" name="mobno">
+                        </td>
+                    </tr>
+                </table>
+<!--Update and Edit button-->
+            <div class="pull-right ">
+                    <!--Save changes with modal-->
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal-1">
+                        <span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Save
+                    </button>
+                    <!--Modal for saving changes-->
+                         <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1">
+                             <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                     <div class="modal-header">
+                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title" id="myModalLabel-1"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Confirmation message</h4>
+                                     </div>
+                                     <div class="modal-body">
+                                         <p>Do you really want to save this changes to participant: <strong><span th:text="${user.e_mail}">&nbsp;</span></strong>?</p>
+                                     </div>
+                                     <div class="modal-footer">
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                         <label for="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span>&nbsp;Save changes</label>
+                                         <input type="submit" id="submit" value="Update" name="submit">
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     <!--Delete with modal-->
+                         <!-- Button trigger delete -->
+                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal-2">
+                             <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete
+                         </button>
+                    <!--Modal for delete-->
+                         <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">
+                             <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                     <div class="modal-header">
+                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title" id="myModalLabel-2"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Confirmation message</h4>
+                                     </div>
+                                     <div class="modal-body">
+                                         <p>Do you really want to delete participant: <strong><span th:text="${user.e_mail}">&nbsp;</span></strong>?</p>
+                                     </div>
+                                     <div class="modal-footer">
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                         <a th:href="@{/remove/{id}(id=${user.id})}" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete anyway!</a>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                </div>
+             </form>
+         </div>
+    </div>
+</body>
+<div th:replace="liberoFragments/footer :: footer">Footer</div>
+</html>

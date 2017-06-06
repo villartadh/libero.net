@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div th:fragment="successMsg">
+    <div id="successDialog" class="modal-dialog afterSuccess" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="modal-title">Thank you dear participant!</h3>
+            </div>
+            <div class="modal-footer">
+                <a th:href="@{/participantsList}" class="btn btn-primary btn-sm">
+                    <span class="fa fa-user" aria-hidden="true">&nbsp;</span>Participants&nbsp;&nbsp;
+                    <span class="fa fa-share" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+</body>
+</html>

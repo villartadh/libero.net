@@ -1,0 +1,822 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 8, ../sass/screen.scss */
+* {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 15, ../sass/screen.scss */
+p, label, h1, h2, h3, h5, li {
+  font-weight: lighter;
+  color: #4e4e4e;
+}
+
+/* line 20, ../sass/screen.scss */
+h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 5px;
+  color: #000000;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+/* line 28, ../sass/screen.scss */
+i.fa-2x {
+  position: relative;
+  top: 5px;
+  font-size: 1.8em;
+  color: cornflowerblue;
+}
+
+/* line 35, ../sass/screen.scss */
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 41, ../sass/screen.scss */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 46, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 50, ../sass/screen.scss */
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* line 57, ../sass/screen.scss */
+.hide {
+  display: none;
+}
+
+/* line 61, ../sass/screen.scss */
+.container {
+  width: 75%;
+  margin: 30px 12.5%;
+}
+
+/* line 67, ../sass/screen.scss */
+#first-section:after, #second-section:after, footer:after, .clear {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 73, ../sass/screen.scss */
+.background-img {
+  width: 100%;
+}
+
+/*************
+Header
+*************/
+/* line 81, ../sass/screen.scss */
+body {
+  /**************
+  first section
+  **************/
+  /**************
+  second section
+  **************/
+  /**************
+  footer
+  **************/
+}
+/* line 82, ../sass/screen.scss */
+body header {
+  background-color: #0a233d;
+  padding: 0;
+  min-height: 90px;
+}
+/* line 86, ../sass/screen.scss */
+body header div#nav-logo {
+  width: 250px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+/* line 91, ../sass/screen.scss */
+body header div#nav-logo #logo {
+  cursor: pointer;
+}
+/* line 94, ../sass/screen.scss */
+body header div#nav-logo #libero {
+  margin-left: 20px;
+  cursor: pointer;
+}
+/* line 99, ../sass/screen.scss */
+body header div#menu {
+  display: none;
+}
+/* line 102, ../sass/screen.scss */
+body header ul.hiddenSearch {
+  display: none;
+}
+/* line 104, ../sass/screen.scss */
+body header ul.hiddenSearch li form input {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0 10px;
+  width: auto;
+  height: 28px;
+  outline-style: none;
+  border: 2px solid cornflowerblue;
+  border-radius: 5px;
+}
+/* line 114, ../sass/screen.scss */
+body header ul.hiddenSearch li:last-child {
+  margin: 0 0 0 5px;
+}
+/* line 119, ../sass/screen.scss */
+body header ul#nav {
+  background-color: #0a233d;
+  margin-top: 33px;
+  float: right;
+  margin-right: 10px;
+  font-size: 0.8em;
+}
+/* line 125, ../sass/screen.scss */
+body header ul#nav li {
+  float: left;
+  cursor: pointer;
+  margin-right: 30px;
+}
+/* line 129, ../sass/screen.scss */
+body header ul#nav li a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 135, ../sass/screen.scss */
+body header ul#nav li:nth-child(5) form input {
+  margin: 0;
+  padding: 0 10px;
+  width: auto;
+  height: 28px;
+  outline-style: none;
+  border: 2px solid cornflowerblue;
+  border-radius: 5px;
+}
+/* line 144, ../sass/screen.scss */
+body header ul#nav li:nth-child(5) {
+  margin: 0 5px 0 0;
+}
+/* line 147, ../sass/screen.scss */
+body header ul#nav li a:hover {
+  color: cornflowerblue;
+}
+/* line 152, ../sass/screen.scss */
+body header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 164, ../sass/screen.scss */
+body #first-section {
+  float: left;
+  width: 75%;
+  font-size: 0.9em;
+}
+/* line 168, ../sass/screen.scss */
+body #first-section h2 {
+  font-size: 1.9em;
+  color: #0a233d;
+  padding-bottom: 10px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0.83em;
+}
+/* line 175, ../sass/screen.scss */
+body #first-section form {
+  padding: 0 8%;
+}
+/* line 177, ../sass/screen.scss */
+body #first-section form p {
+  text-space: 5px;
+  margin-bottom: 10px;
+}
+/* line 181, ../sass/screen.scss */
+body #first-section form input[name=postcode] {
+  padding: 0 10px;
+  width: 90px;
+  height: 28px;
+  outline-style: none;
+  border: 2px solid cornflowerblue;
+  border-radius: 20px;
+}
+/* line 190, ../sass/screen.scss */
+body #first-section form div input[type=radio] {
+  margin-bottom: 5px;
+}
+/* line 194, ../sass/screen.scss */
+body #first-section form input[name=email] {
+  margin-bottom: 10px;
+  border: 2px solid cornflowerblue;
+  margin-top: 2px;
+  padding: 0 10px;
+  outline-style: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 28px;
+}
+/* line 204, ../sass/screen.scss */
+body #first-section form input[name=mobno] {
+  padding: 0 10px;
+  width: 200px;
+  height: 28px;
+  outline-style: none;
+  border: 2px solid cornflowerblue;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+/* line 213, ../sass/screen.scss */
+body #first-section form input[type=submit] {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: 0 10px;
+  width: 90px;
+  height: 28px;
+  background-color: #0a233d;
+  outline-style: none;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid #0a233d;
+  cursor: pointer;
+}
+/* line 228, ../sass/screen.scss */
+body #first-section form .radio-toolbar input[type="radio"] {
+  outline: 0;
+  position: absolute;
+  display: none;
+}
+/* line 234, ../sass/screen.scss */
+body #first-section form .radio-toolbar label {
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  background-color: white;
+  color: cornflowerblue;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid cornflowerblue;
+  padding: 3px 0 0 25px;
+  margin-right: 5px;
+  /*******************
+  custom radio button
+  *******************/
+}
+/* line 253, ../sass/screen.scss */
+body #first-section form .radio-toolbar label .outer {
+  margin: 0;
+  position: relative;
+  right: 20px;
+  top: -18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid cornflowerblue;
+}
+/* line 263, ../sass/screen.scss */
+body #first-section form .radio-toolbar label .inner {
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: cornflowerblue;
+}
+/* line 274, ../sass/screen.scss */
+body #first-section form .radio-toolbar input[type="radio"]:checked + label {
+  background-color: cornflowerblue;
+  color: white;
+}
+/* line 277, ../sass/screen.scss */
+body #first-section form .radio-toolbar input[type="radio"]:checked + label .inner {
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: white;
+}
+/* line 286, ../sass/screen.scss */
+body #first-section form .radio-toolbar input[type="radio"]:checked + label .outer {
+  margin: 0;
+  position: relative;
+  right: 20px;
+  top: -18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+/* line 298, ../sass/screen.scss */
+body #first-section form .radio-toolbar input[type="radio"]:checked + label#radio-button-select {
+  background-color: cornflowerblue;
+  border: 2px solid white;
+}
+/* line 312, ../sass/screen.scss */
+body #second-section {
+  border-left: 1px solid #000000;
+  padding-left: 20px;
+  width: 25%;
+  float: right;
+}
+/* line 317, ../sass/screen.scss */
+body #second-section h3 {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #0a1429;
+  font-size: 1.15em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 1.33em;
+}
+/* line 326, ../sass/screen.scss */
+body #second-section div.closure div.article {
+  position: relative;
+  border-top: 10px solid cornflowerblue;
+  padding-top: 10px;
+}
+/* line 330, ../sass/screen.scss */
+body #second-section div.closure div.article .background-img:hover {
+  opacity: 0.8;
+  zoom: 120%;
+}
+/* line 334, ../sass/screen.scss */
+body #second-section div.closure div.article h4 {
+  position: absolute;
+  text-align: center;
+  font-weight: normal;
+  z-index: 1;
+  color: #fff;
+  top: 10px;
+}
+/* line 342, ../sass/screen.scss */
+body #second-section div.closure div.article h4:hover {
+  zoom: 103%;
+}
+/* line 345, ../sass/screen.scss */
+body #second-section div.closure div.article div {
+  width: 100%;
+  position: relative;
+}
+/* line 348, ../sass/screen.scss */
+body #second-section div.closure div.article div a {
+  position: absolute;
+  text-align: center;
+  padding-top: 3px;
+  background-color: #0d5990;
+  color: white;
+  height: 20px;
+  width: 75px;
+  bottom: 4px;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+/* line 360, ../sass/screen.scss */
+body #second-section div.closure div.article div a:hover {
+  height: 22px;
+  width: 77px;
+  font-size: 0.78em;
+}
+/* line 367, ../sass/screen.scss */
+body #second-section div.closure p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+/* line 376, ../sass/screen.scss */
+body footer {
+  margin: 30px auto;
+  border-top: 1px solid #000000;
+  padding: 0 5%;
+}
+/* line 381, ../sass/screen.scss */
+body footer .container ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  float: left;
+  width: 18%;
+  text-align: left;
+  margin: 0 1%;
+  padding-left: 3px;
+  font-weight: 400;
+}
+/* line 390, ../sass/screen.scss */
+body footer .container ul hr.divider {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0.5em;
+  background-color: #596eda;
+  border-width: 0;
+  width: 58%;
+  float: left;
+  height: 1px;
+}
+/* line 399, ../sass/screen.scss */
+body footer .container ul li {
+  color: #0a233d;
+  font-size: 0.9em;
+}
+
+/*Media query*/
+@media only screen and (max-width: 904px) {
+  /* line 411, ../sass/screen.scss */
+  body header {
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  /* line 416, ../sass/screen.scss */
+  body header div#nav-logo {
+    width: 250px;
+    margin: 0 10% 0 30px;
+    float: none;
+  }
+
+  /* line 422, ../sass/screen.scss */
+  body header ul.hiddenSearch {
+    display: block;
+    width: 250px;
+    position: absolute;
+    top: 31px;
+    right: 0;
+    margin-right: 30px;
+  }
+
+  /* line 431, ../sass/screen.scss */
+  body header ul#nav {
+    width: 60%;
+    margin: 10px 20%;
+    float: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  /* line 440, ../sass/screen.scss */
+  body header ul#nav li {
+    margin: 10px 5%;
+    text-align: center;
+  }
+
+  /* line 445, ../sass/screen.scss */
+  body header ul#nav li:last-child {
+    width: 0;
+    display: none;
+  }
+
+  /* line 450, ../sass/screen.scss */
+  body header ul#nav li:nth-child(5) {
+    width: 0;
+    display: none;
+  }
+
+  /* line 455, ../sass/screen.scss */
+  body header ul#nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 840px) {
+  /* line 462, ../sass/screen.scss */
+  body #first-section {
+    height: 410px;
+    float: none;
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  /* line 469, ../sass/screen.scss */
+  body #first-section h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 474, ../sass/screen.scss */
+  body #first-section form {
+    padding: 0 3%;
+  }
+
+  /* line 478, ../sass/screen.scss */
+  .clearFix {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* line 484, ../sass/screen.scss */
+  body #second-section {
+    border-left: none;
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+    float: none;
+  }
+
+  /* line 492, ../sass/screen.scss */
+  body #second-section .closure {
+    width: 44%;
+    margin: 0 3%;
+    float: left;
+  }
+
+  /* line 498, ../sass/screen.scss */
+  body #second-section h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  /* line 504, ../sass/screen.scss */
+  body #second-section div.closure div.article h4 {
+    position: absolute;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.3em;
+    z-index: 1;
+    top: 30px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 518, ../sass/screen.scss */
+  .container {
+    width: 90%;
+    margin: 30px 5%;
+  }
+
+  /* line 523, ../sass/screen.scss */
+  body footer .container ul {
+    float: left;
+    width: 23%;
+    text-align: left;
+    margin: 0 1%;
+  }
+
+  /* line 530, ../sass/screen.scss */
+  body footer .container ul:last-child {
+    clear: both;
+    float: none;
+    width: 100%;
+    text-align: left;
+    margin: 0 1%;
+  }
+
+  /* line 538, ../sass/screen.scss */
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 21%;
+    display: inline-block;
+    margin: 0 2%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  /* line 547, ../sass/screen.scss */
+  body header ul#nav {
+    width: 70%;
+    margin: 10px 15%;
+    font-size: 0.8em;
+  }
+
+  /* line 553, ../sass/screen.scss */
+  body header ul#nav li {
+    width: 21%;
+    margin: 10px 2%;
+  }
+
+  /* line 558, ../sass/screen.scss */
+  body #second-section div.closure div.article h4 {
+    top: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 563, ../sass/screen.scss */
+  body header ul.hiddenSearch {
+    display: none;
+    width: 0;
+  }
+
+  /* line 568, ../sass/screen.scss */
+  body #first-section form {
+    width: 96%;
+    margin: auto 2%;
+  }
+
+  /* line 573, ../sass/screen.scss */
+  body #second-section .closure {
+    width: 80%;
+    margin: 0 10%;
+    float: none;
+    height: auto;
+  }
+
+  /* line 580, ../sass/screen.scss */
+  body #second-section div.closure div.article h4 {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  /* line 589, ../sass/screen.scss */
+  body footer .container ul {
+    float: none;
+    width: 40%;
+    margin: 50px 30%;
+    text-align: center;
+  }
+
+  /* line 597, ../sass/screen.scss */
+  body footer .container ul hr.divider {
+    width: 100%;
+  }
+
+  /* line 602, ../sass/screen.scss */
+  body footer .container ul li {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* line 609, ../sass/screen.scss */
+  body footer .container ul:last-child {
+    float: none;
+    width: 30%;
+    margin: 50px 35%;
+    text-align: center;
+  }
+
+  /* line 617, ../sass/screen.scss */
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 100%;
+    margin: 0 2%;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 627, ../sass/screen.scss */
+  .container {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  /* line 632, ../sass/screen.scss */
+  .merge {
+    height: 0;
+  }
+
+  /* line 636, ../sass/screen.scss */
+  .wrapper {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* line 642, ../sass/screen.scss */
+  body header {
+    padding-top: 30px;
+    overflow: inherit;
+    height: auto;
+  }
+
+  /* line 648, ../sass/screen.scss */
+  body header div#nav-logo {
+    margin: 0 auto 15px 30px;
+  }
+
+  /* line 652, ../sass/screen.scss */
+  body header div#menu {
+    display: block;
+    width: 100%;
+    background-color: #071b2f;
+    margin: 5px 0 5px 0;
+    padding-bottom: 10px;
+    position: absolute;
+  }
+
+  /* line 661, ../sass/screen.scss */
+  body header div#menu i {
+    font-size: 1.3em;
+    font-weight: normal;
+    font-family: 'Droid Sans', sans-serif;
+    color: #fff;
+    margin: 7px auto 7px 30px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  /* line 671, ../sass/screen.scss */
+  body header ul#nav {
+    background-color: #32363e;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 0.8em;
+    overflow: visible;
+    position: relative;
+    top: 44px;
+  }
+
+  /* line 682, ../sass/screen.scss */
+  body header ul#nav li {
+    width: 100%;
+    margin: 15px 0 15px 30px;
+    text-align: left;
+  }
+
+  /* line 688, ../sass/screen.scss */
+  body header ul#nav li:last-child {
+    width: 0;
+    display: none;
+  }
+
+  /* line 693, ../sass/screen.scss */
+  body header ul#nav li:nth-child(5) {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* line 699, ../sass/screen.scss */
+  body header ul#nav li:nth-child(5) form input {
+    margin: 0 1% 0 30px;
+    padding: 0 10px;
+    width: 85%;
+    height: 35px;
+    outline-style: none;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+  }
+
+  /* line 709, ../sass/screen.scss */
+  body #second-section .closure {
+    width: 90%;
+    margin: 0 5%;
+    float: none;
+    height: auto;
+  }
+
+  /* line 716, ../sass/screen.scss */
+  body footer .container ul {
+    float: none;
+    width: 100%;
+    margin: 50px 0;
+    text-align: left;
+  }
+
+  /* line 723, ../sass/screen.scss */
+  body #second-section div.closure div.article h4 {
+    top: 25px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  /* line 730, ../sass/screen.scss */
+  body footer .container ul hr.divider {
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    width: 100%;
+  }
+
+  /* line 737, ../sass/screen.scss */
+  body footer .container ul:last-child {
+    float: none;
+    width: 100%;
+    margin: 50px auto;
+    text-align: left;
+  }
+
+  /* line 744, ../sass/screen.scss */
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 96%;
+    margin: 0 2%;
+    text-align: left;
+  }
+}

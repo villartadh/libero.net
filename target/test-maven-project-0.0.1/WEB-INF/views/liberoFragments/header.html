@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../../../resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="../../../resources/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../../resources/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="../../../resources/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="../../../resources/css/customize.css" rel="stylesheet" media="screen" th:href="@{/resources/css/customize.css}"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div id="nav-logo">
+            <img src="../../../resources/images/logo.png" th:src="@{resources/images/logo.png}"id="logo">
+            <img src="../../../resources/images/libero.png" th:src="@{resources/images/libero.png}"id="libero">
+        </div>
+        <ul class="hiddenSearch">
+            <li>
+                <form action="#"><input type="search" name="searchHide" class="hide"></form>
+            </li>
+            <li><img th:src="@{resources/images/search-icon.png}" style="float: right" alt="search" id="searchHiddenToggle"></li>
+        </ul>
+        <div id="menu">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <ul id="nav" class="merge">
+            <li  class="selected"><a href="#">HOME</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">WORLD</a></li>
+            <li>
+                <form action="#"><input type="search" name="search" class="hide"></form>
+            </li>
+            <li><img src="../../../resources/images/search-icon.png" th:src="@{resources/images/search-icon.png}" alt="search" id="search"></li>
+        </ul>
+    </header>
+    </div>
+<script type="text/javascript"  th:src="@{resources/js/main.js}"></script>
+</body>
+</html>

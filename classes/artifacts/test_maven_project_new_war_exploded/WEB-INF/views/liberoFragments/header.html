@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header"  style="background-color: #0a233d">
+    <div class="container">
+        <div class="navbar-header bg-inverse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar bg-primary"></span>
+                <span class="icon-bar bg-primary"></span>
+                <span class="icon-bar bg-primary"></span>
+            </button>
+            <a class="navbar-brand" th:href="@{/liberoForm}">
+                <img src="../../../resources/images/libero.png" th:href="@{resources/images/libero.png}" alt="libero">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse nav-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a th:href="@{/liberoForm}">HOME</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#world">WORLD</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a th:href="@{/participantsList}">
+                        <span class="glyphicon glyphicon-user">&nbsp;</span>Participants
+                    </a>
+                </li>
+                <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                    <a href="/signin" th:href="@{/signin}">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in
+                    </a>
+                </li>
+                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+                    </a>
+                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+</body>
+</html>

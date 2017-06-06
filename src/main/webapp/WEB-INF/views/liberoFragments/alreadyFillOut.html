@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div th:fragment="alreadyFillOut">
+    <div id="successDialog2" class="modal-dialog filledOut" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="modal-title">You are already filled out this survey!</h3>
+            </div>
+            <div class="modal-footer">
+                <a th:href="@{/participantsList}" class="btn btn-primary btn-sm">
+                    <span class="fa fa-user">&nbsp;</span>Participants&nbsp;&nbsp;
+                    <span class="fa fa-share"></span>
+                </a>
+                <a th:href="@{/liberoForm}" id="clearData" style="float: right" class="btn btn-primary btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Clear</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script type="text/javascript"  th:src="@{resources/js/main.js}"></script>
+</body>
+</html>

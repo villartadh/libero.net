@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list of participants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <link href="../../../resources/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../../resources/css/customize.css" rel="stylesheet" media="screen" th:href="@{/resources/css/customize.css}"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <style rel="stylesheet">
+        .glyphicon-trash{
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .glyphicon-pencil{
+            color: #fdffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div th:replace="liberoFragments/header :: header">Header</div>
+    <div class="container">
+        <!--Response msg-->
+        <th:block th:if="${message != null}">
+            <!-- /* The message code is returned from the @Controller in LiberoFormController.java */ -->
+            <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})"><span th:text="${user.email}"></span>&nbsp;
+            </div>
+        </th:block>
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4><span class="glyphicon glyphicon-user"></span>&nbsp;List of Participants
+                <a th:href="@{/liberoForm}" class="btn btn-info pull-right btn-xs">
+                    <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add
+                </a>
+            </h4>
+        </div>
+        <div class="table-responsive">
+        <!--Table for list of users-->
+            <table class="table table table-hover table-striped table-responsive" style="font-family: 'Droid Sans', sans-serif">
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Created</th>
+                    <th class="text-center">Postcode</th>
+                    <th class="text-center">Choice</th>
+                    <th class="text-center">E-mail</th>
+                    <th class="text-center">Mobile no</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                <tr th:each="user : ${users}" class="text-center">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${#dates.format(user.created, 'MMM dd, YYYY')}"></td>
+                    <td th:text="${user.postcode}"></td>
+                    <td th:text="${user.radios}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.mobno}"></td>
+                    <td>
+                        <div class="pull-right" style="margin: 2px">
+                            <a th:href="@{/remove/{id}(id=${user.id})}" class="btn btn-danger btn-xs">&nbsp;<span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete</a>
+                        </div>
+                        <div class="pull-right" style="margin: 2px">
+                            <a th:href="@{/participant/{id}(id=${user.id})}" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Update</a>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+         </div>
+    </div>
+</div>
+<div th:replace="liberoFragments/footer :: footer">Footer</div>
+<script type="text/javascript"  th:src="@{resources/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list of participants</title>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <style rel="stylesheet">
+        .glyphicon-trash{
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .glyphicon-pencil{
+            color: #fdffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div th:replace="liberoFragments/header :: header">Header</div>
+    <div class="container">
+        <!--Response msg-->
+        <th:block th:if="${message != null}">
+            <!-- /* The message code is returned from the @Controller in LiberoFormController.java */ -->
+            <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})"><span th:text="${user.e_mail}"></span>&nbsp;
+            </div>
+        </th:block>
+        <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4><span class="glyphicon glyphicon-user"></span>&nbsp;List of Participants
+                <a th:href="@{/liberoForm}" class="btn btn-info pull-right btn-xs">
+                    <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add
+                </a>
+            </h4>
+        </div>
+        <div class="table-responsive">
+        <!--Table for list of users-->
+            <table class="table table table-hover table-striped">
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Postcode</th>
+                    <th class="text-center">Choice</th>
+                    <th class="text-center">E-mail</th>
+                    <th class="text-center">Mobile no</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                <tr th:each="user : ${users}" class="text-center">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.postcode}"></td>
+                    <td th:text="${user.radios}"></td>
+                    <td th:text="${user.e_mail}"></td>
+                    <td th:text="${user.mobno}"></td>
+                    <td>
+                        <!--For editing user-->
+                        <a th:href="@{/participant/{id}(id=${user.id})}" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Update</a>
+                        <!--For deleting user with modal-->
+                        <!-- Button trigger delete -->
+                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal-2">
+                            <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete
+                        </button>
+                        <!--Modal for delete-->
+                        <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content text-left">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel-2"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Confirmation message</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Do you really want to delete participant: <strong><span th:text="${user.e_mail}">&nbsp;</span></strong>?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <a th:href="@{/remove/{id}(id=${user.id})}" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete anyway!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+         </div>
+    </div>
+</div>
+<div th:replace="liberoFragments/footer :: footer">Footer</div>
+</body>
+</html>

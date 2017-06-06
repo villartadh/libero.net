@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You!</title>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div th:replace="liberoFragments/header :: header">Header</div>
+    <div class="container">
+        <!--Response msg-->
+        <th:block th:if="${message != null}">
+            <!-- /* The message code is returned from the @Controller in LiberoFormController.java */ -->
+            <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})"><span th:text="${user.e_mail}"></span>&nbsp;
+            </div>
+        </th:block>
+    </div>
+<div th:replace="liberoFragments/footer :: footer">Footer</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Libero</title>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/resources/stylesheets/screen.css}">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<style>
+		.error{
+			display: block;
+			color: red;
+		}
+		#radios-error{
+			position: absolute;
+			display: block;
+			left: 200px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<header class="col-12">
+	<div id="head" class="col-12">
+		<div id="burger">
+			<div class="burger"></div>
+			<div class="burger"></div>
+			<div class="burger"></div>
+			<div id="dropdown" class="col-12">
+				<ul id="drop-content" class="col-12">
+					<a href="#"><li class="selected">HOME</li></a>
+					<a href="#"><li>NEWS</li></a>
+					<a href="#"><li>EVENTS</li></a>
+					<a href="#"><li>WORLD</li></a>
+				</ul>
+			</div>
+		</div>
+		<h1 id="logo">LIBERO</h1>
+		<div>
+			<img th:src="@{resources/images/search-icon.png}" alt="search" id="search">
+			<div id="search-nav">
+				<div id="content">
+					<input type="search" name="search">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="nav" class="col-12 col-m-7">
+		<ul id="holder" class="col-12">
+			<li  class="selected"><a href="#">HOME</a></li>
+			<li><a href="#">NEWS</a></li>
+			<li><a href="#">EVENTS</a></li>
+			<li><a href="#">WORLD</a></li>
+		</ul>
+	</div>
+</header>
+<div id="container" class="col-12">
+	<section id="first-section" class="col-m-9">
+
+		<h1 class="msg">How do you feel about recycling?</h1>
+		<form  id="info_form" th:action="@{/create}" th:method="post">
+			<p>Postcode:</p>
+			<input type="text" class="postcode" id="postcode" name="postcode">
+			<p id="response1" class="error"></p>
+			<p>Should the government start enforcing garbage
+				separation and recycling schemes across your area?</p>
+			<div class="radio-toolbar">
+
+				<input type="radio" id="radio1"  name="radios" value="Yes" checked>
+				<label for="radio1">Yes
+					<div class="outer"  id="radio-button-select"><div class="inner"></div></div>
+				</label>
+
+				<input type="radio" id="radio2" name="radios" value="No">
+				<label for="radio2">No
+					<div class="outer"><div class="inner"></div></div>
+				</label>
+
+			</div>
+			<p id="response2" class="error"></p>
+			<label for="e_mail">E-mail Address:</label>
+			<br>
+			<input type="text" id="e_mail" name="e_mail">
+			<p id="response3" class="error"></p>
+			<br>
+			<label for="mobno">Mobile Number:</label>
+			<br>
+			<input type="text" id="mobno" name="mobno">
+			<p id="response4" class="error"></p>
+			<br>
+			<input type="submit" id="submit" class="submit" name="submit">
+		</form>
+	</section>
+
+	<section id="second-section" class="col-12 col-m-3">
+		<hr class="col-12">
+
+		<h4>Phasellus augue sapien</h4>
+
+		<div class="article">
+			<hr class="hr col-12">
+			<img th:src="@{resources/images/1c.jpeg}" alt="image" class="background-img">
+			<div class="link-con"><a href="#">Read more >></a></div>
+		</div>
+		<p>Phasellus augue sapien, aliquam sit amec mauris</p>
+
+		<div class="article">
+			<hr class="hr col-12">
+			<img th:src="@{resources/images/1b.jpeg}">
+			<div class="link-con"><a href="#">Read more >></a></div>
+		</div>
+		<p>Sed facilisis volutpat turpis eu viverra</p>
+
+	</section>
+	<hr class="col-12">
+	<footer class="col-12 clear">
+		<div class="col-12">
+			<ul class="footer-list">
+				<h4>Rutrum</h4>
+				<hr class="div-hr">
+				<li>Fermentum</li>
+				<li>Neque</li>
+				<li>Consequat</li>
+			</ul>
+		</div>
+		<div class="col-12">
+			<ul class="footer-list">
+				<h4>Malesuada</h4>
+				<hr class="div-hr">
+				<li>Tellus</li>
+				<li>Condimentum</li>
+				<li>Consectetur</li>
+			</ul>
+		</div>
+		<div class="col-12">
+			<ul class="footer-list">
+				<h4>Pellentesque</h4>
+				<hr class="div-hr">
+				<li>Habitant</li>
+				<li>Morbi</li>
+				<li>Tristique</li>
+			</ul>
+		</div>
+		<div class="col-12">
+			<ul class="footer-list">
+				<h4>Quisque</h4>
+				<hr class="div-hr">
+				<li>Pharetra</li>
+				<li>Volutpat</li>
+				<li>Tristique</li>
+			</ul>
+		</div>
+		<div id="footer-list-last" class="col-12">
+			<h4>Phasellus</h4>
+			<h4>Augue</h4>
+			<h4>Sapien</h4>
+		</div>
+	</footer>
+</div>
+<!--<script type="text/javascript" th:src="@{resources/js/lib/jquery.js}"></script>-->
+<!--<script type="text/javascript" th:src="@{resources/js/tooltipster.bundle.min.js}"></script>-->
+<!--<script type="text/javascript" th:src="@{resources/js/jQuery_validation_plugin.js}"></script>-->
+<!--<script type="text/javascript"  th:src="@{resources/js/main.js}"></script>-->
+</body>
+</html>

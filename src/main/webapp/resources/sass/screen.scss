@@ -1,0 +1,754 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*@import "compass/reset";*/
+
+*{
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+p, label, h1, h2, h3, h5 ,li{
+  font-weight: lighter;
+  color: #4e4e4e;
+}
+
+h6{
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 5px;
+  color: #000000;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+i.fa-2x{
+  position: relative;
+  top: 5px;
+  font-size: 1.8em;
+  color: cornflowerblue;
+}
+
+ul, li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+
+.hide{
+  display: none;
+}
+
+.container{
+  width: 75%;
+  margin:  30px 12.5%;
+}
+
+
+#first-section:after, #second-section:after, footer:after, .clear{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.background-img{
+  width: 100%;
+}
+
+
+/*************
+Header
+*************/
+body{
+  header{
+    background-color: #0a233d;
+    padding: 0;
+    min-height: 90px;
+    div#nav-logo{
+      width: 250px;
+      float: left;
+      margin-top: 30px;
+      margin-left: 30px;
+      #logo{
+        cursor: pointer;
+      }
+      #libero{
+        margin-left: 20px;
+        cursor: pointer;
+      }
+    }
+    div#menu{
+      display: none;
+    }
+    ul.hiddenSearch {
+      display: none;
+      li form input{
+        float: left;
+        margin: 0 15px 0 0;
+        padding: 0 10px;
+        width: auto;
+        height: 28px;
+        outline-style: none;
+        border: 2px solid cornflowerblue;
+        border-radius: 5px;
+      }
+      li:last-child{
+        margin: 0 0 0 5px;
+      }
+    }
+
+    ul#nav{
+      background-color: #0a233d;
+      margin-top: 33px;
+      float: right;
+      margin-right: 10px;
+      font-size: 0.8em;
+      li{
+        float: left;
+        cursor: pointer;
+        margin-right: 30px;
+        a{
+          font-size: 1.1em;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      li:nth-child(5) form input{
+        margin: 0;
+        padding: 0 10px;
+        width: auto;
+        height: 28px;
+        outline-style: none;
+        border: 2px solid cornflowerblue;
+        border-radius: 5px;
+      }
+      li:nth-child(5){
+        margin: 0 5px 0 0;
+      }
+      li a:hover{
+        color: cornflowerblue;
+      }
+    }
+  }
+  header:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+
+
+  /**************
+  first section
+  **************/
+  
+  #first-section{
+    float: left;
+    width: 75%;
+    font-size: 0.9em;
+    h2 {
+      font-size: 1.9em;
+      color: #0a233d;
+      padding-bottom: 10px;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0.83em;
+    }
+    form {
+      padding: 0 8%;
+      p {
+        text-space: 5px;
+        margin-bottom: 10px;
+      }
+      input[name=postcode] {
+        padding: 0 10px;
+        width: 90px;
+        height: 28px;
+        outline-style: none;
+        border: 2px solid cornflowerblue;
+        border-radius: 20px;
+      }
+      div {
+      input[type=radio] {
+          margin-bottom: 5px;
+      }
+      }
+      input[name=email] {
+        margin-bottom: 10px;
+        border: 2px solid cornflowerblue;
+        margin-top: 2px;
+        padding: 0 10px;
+        outline-style: none;
+        border-radius: 20px;
+        width: 200px;
+        height: 28px;
+      }
+      input[name=mobno] {
+        padding: 0 10px;
+        width: 200px;
+        height: 28px;
+        outline-style: none;
+        border: 2px solid cornflowerblue;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+      input[type=submit] {
+        float: right;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+        width: 90px;
+        height: 28px;
+        background-color: #0a233d;
+        outline-style: none;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #0a233d;
+        cursor: pointer;
+
+      }
+      .radio-toolbar input[type="radio"] {
+        outline: 0;
+        position: absolute;
+        display: none;
+      }
+
+      .radio-toolbar label {
+        display: inline-block;
+        width: 60px;
+        height: 28px;
+        background-color: white;
+        color: cornflowerblue;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2px solid cornflowerblue;
+        padding: 3px 0 0 25px;
+        margin-right: 5px;
+
+
+
+        /*******************
+        custom radio button
+        *******************/
+
+        .outer {
+          margin: 0;
+          position: relative;
+          right: 20px;
+          top: -18px;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+          border: 2px solid cornflowerblue;
+        }
+        .inner {
+          position: relative;
+          left: 2px;
+          top: 2px;
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: cornflowerblue;
+        }
+      }
+
+      .radio-toolbar input[type="radio"]:checked + label {
+        background-color: cornflowerblue;
+        color: white;
+        .inner{
+          position: relative;
+          left: 2px;
+          top: 2px;
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: white;
+        }
+        .outer {
+          margin: 0;
+          position: relative;
+          right: 20px;
+          top: -18px;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+          border: 2px solid white;
+        }
+
+      }
+      .radio-toolbar input[type="radio"]:checked + label#radio-button-select {
+        background-color: cornflowerblue;
+        border: 2px solid white;
+      }
+    }
+  }
+
+
+
+
+
+  /**************
+  second section
+  **************/
+  #second-section{
+    border-left: 1px solid #000000;
+    padding-left: 20px;
+    width: 25%;
+    float: right;
+    h3 {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #0a1429;
+      font-size: 1.15em;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 1.33em;
+    }
+    div.closure {
+      div.article{
+        position: relative;
+        border-top: 10px solid cornflowerblue;
+        padding-top: 10px;
+        .background-img:hover{
+          opacity: 0.8;
+          zoom: 120%;
+        }
+        h4{
+          position: absolute;
+          text-align: center;
+          font-weight: normal;
+          z-index: 1;
+          color: #fff;
+          top: 10px;
+        }
+        h4:hover{
+          zoom: 103%;
+        }
+        div{
+          width: 100%;
+          position: relative;
+          a{
+            position: absolute;
+            text-align: center;
+            padding-top: 3px;
+            background-color: #0d5990;
+            color: white;
+            height: 20px;
+            width: 75px;
+            bottom: 4px;
+            font-size: 0.7em;
+            opacity: 0.8;
+          }
+          a:hover{
+            height: 22px;
+            width: 77px;
+            font-size: 0.78em;
+          }
+        }
+      }
+      p{
+        margin: 10px 0;
+        font-size: 0.9em;
+      }
+    }
+  }
+  /**************
+  footer
+  **************/
+  footer{
+    margin: 30px auto;
+    border-top: 1px solid #000000;
+    padding: 0 5%;
+    .container{
+      ul{
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        float: left;
+        width: 18%;
+        text-align: left;
+        margin: 0 1%;
+        padding-left: 3px;
+        font-weight: 400;
+        hr.divider{
+          -webkit-margin-before: 0;
+          -webkit-margin-after: 0.5em;
+          background-color: #596eda;
+          border-width: 0;
+          width: 58%;
+          float: left;
+          height: 1px;
+        }
+        li{
+          color: #0a233d;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+/*Media query*/
+
+@media only screen and (max-width: 904px) {
+  body header {
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  body header div#nav-logo {
+    width: 250px;
+    margin: 0 10% 0 30px;
+    float: none;
+  }
+
+  body header ul.hiddenSearch {
+    display: block;
+    width: 250px;
+    position: absolute;
+    top: 31px;
+    right: 0;
+    margin-right: 30px;
+  }
+
+  body header ul#nav {
+    width: 60%;
+    margin: 10px 20%;
+    float: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  body header ul#nav li {
+    margin: 10px 5%;
+    text-align: center;
+  }
+
+  body header ul#nav li:last-child {
+    width: 0;
+    display: none;
+  }
+
+  body header ul#nav li:nth-child(5) {
+    width: 0;
+    display: none;
+  }
+
+  body header ul#nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 840px) {
+  body #first-section {
+    height: 410px;
+    float: none;
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  body #first-section h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  body #first-section form {
+    padding: 0 3%;
+  }
+
+  .clearFix {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body #second-section {
+    border-left: none;
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+    float: none;
+  }
+
+  body #second-section .closure {
+    width: 44%;
+    margin: 0 3%;
+    float: left;
+  }
+
+  body #second-section h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  body #second-section div.closure div.article h4 {
+    position: absolute;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.3em;
+    z-index: 1;
+    top: 30px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media only screen and (max-width: 768px) {
+
+  .container {
+    width: 90%;
+    margin: 30px 5%;
+  }
+
+  body footer .container ul {
+    float: left;
+    width: 23%;
+    text-align: left;
+    margin: 0 1%;
+  }
+
+  body footer .container ul:last-child {
+    clear: both;
+    float: none;
+    width: 100%;
+    text-align: left;
+    margin: 0 1%;
+  }
+
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 21%;
+    display: inline-block;
+    margin: 0 2%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  body header ul#nav {
+    width: 70%;
+    margin: 10px 15%;
+    font-size: 0.8em;
+  }
+
+  body header ul#nav li {
+    width: 21%;
+    margin: 10px 2%;
+  }
+
+  body #second-section div.closure div.article h4 {
+    top: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body header ul.hiddenSearch {
+    display: none;
+    width: 0;
+  }
+
+  body #first-section form {
+    width: 96%;
+    margin:auto 2%;
+  }
+
+  body #second-section .closure {
+    width: 80%;
+    margin: 0 10%;
+    float: none;
+    height: auto;
+  }
+
+  body #second-section div.closure div.article h4 {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  body footer .container ul {
+    float: none;
+    width: 40%;
+    margin: 50px 30%;
+    text-align: center;
+  }
+
+
+  body footer .container ul hr.divider {
+    width: 100%;
+  }
+
+
+  body footer .container ul li {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+
+  body footer .container ul:last-child {
+    float: none;
+    width: 30%;
+    margin: 50px 35%;
+    text-align: center;
+  }
+
+
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 100%;
+    margin: 0 2%;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 480px) {
+
+  .container {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .merge {
+    height: 0;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    margin: 0;
+  }
+
+
+  body header {
+    padding-top: 30px;
+    overflow: inherit;
+    height: auto;
+  }
+
+  body header div#nav-logo {
+    margin: 0 auto 15px 30px;
+  }
+
+  body header div#menu {
+    display: block;
+    width: 100%;
+    background-color: #071b2f;
+    margin: 5px 0 5px 0;
+    padding-bottom: 10px;
+    position: absolute;
+  }
+
+  body header div#menu i {
+    font-size: 1.3em;
+    font-weight: normal;
+    font-family: 'Droid Sans', sans-serif;
+    color: #fff;
+    margin: 7px auto 7px 30px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  body header ul#nav {
+    background-color: #32363e;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 0.8em;
+    overflow: visible;
+    position: relative;
+    top: 44px;
+  }
+
+  body header ul#nav li {
+    width: 100%;
+    margin: 15px 0 15px 30px;
+    text-align: left;
+  }
+
+  body header ul#nav li:last-child {
+    width: 0;
+    display: none;
+  }
+
+  body header ul#nav li:nth-child(5) {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  body header ul#nav li:nth-child(5) form input {
+    margin: 0 1% 0 30px;
+    padding: 0 10px;
+    width: 85%;
+    height: 35px;
+    outline-style: none;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+  }
+
+  body #second-section .closure {
+    width: 90%;
+    margin: 0 5%;
+    float: none;
+    height: auto;
+  }
+
+  body footer .container ul {
+    float: none;
+    width: 100%;
+    margin: 50px 0;
+    text-align: left;
+  }
+
+  body #second-section div.closure div.article h4 {
+    top: 25px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  body footer .container ul hr.divider {
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    width: 100%;
+  }
+
+
+  body footer .container ul:last-child {
+    float: none;
+    width: 100%;
+    margin: 50px auto;
+    text-align: left;
+  }
+
+  body footer .container ul:last-child li {
+    padding-top: 20px;
+    float: none;
+    width: 96%;
+    margin: 0 2%;
+    text-align: left;
+  }
+
+}
+
+
